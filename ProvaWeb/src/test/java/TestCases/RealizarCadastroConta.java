@@ -2,9 +2,7 @@ package TestCases;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-
 import com.aventstack.extentreports.Status;
-
 import Framework.TestBase;
 import Framework.Report.Report;
 import Framework.Report.ReportType;
@@ -25,11 +23,8 @@ public class RealizarCadastroConta extends TestBase {
 	
 	
 	@Test
-	public void realizarCadastro() throws InterruptedException {
-		
-		
+	public void realizarCadastro() throws InterruptedException {	
 		try {
-			
 			Report.createTest("Realizar Cadastro Conta Corrente", ReportType.GROUP);
 			Report.createStep("Realizar Cadastro");
 			createFirstAccountTask.cadastrarConta();
@@ -39,8 +34,6 @@ public class RealizarCadastroConta extends TestBase {
 		}catch(Exception e) {
 			Report.log(Status.FAIL, e.getMessage(), Screenshot.capture(driver));
 			
-		}
-		
-		
+		}		
 	}
 }
